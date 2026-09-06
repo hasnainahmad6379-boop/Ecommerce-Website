@@ -1,0 +1,99 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap:20px;
+    width: 100%;
+    max-width: 250px;
+    height: 123vh ;
+    background:white
+}
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 20px;
+    padding:5px 10px ;
+    border-radius: 6px;
+    background-color: #f6f6f6;
+    gap:20px;
+    cursor: pointer;
+}
+@media (max-width: 1024px) {
+    .sidebar {
+        max-width: 220px;
+        padding-top: 25px;
+        gap: 15px;
+    }
+
+    .sidebar-item {
+        margin: 0 15px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .sidebar-item {
+        margin: 0;
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .add-product,
+    .list-product {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        justify-content: center;
+        
+    }
+
+    .sidebar-item {
+        margin: 0;
+        padding: 6px;
+        gap: 5px;
+    }
+
+    .add-product,
+    .list-product {
+        margin: 12px 8px;
+        padding: 12px;
+    }
+}
+@media (max-width: 320px) {
+    .sidebar {
+        padding: 6px;
+        gap: 6px;
+    }
+
+    .sidebar-item {
+        padding: 5px;
+        gap: 4px;
+        font-size: 13px;
+    }
+
+    .sidebar-item img,
+    .sidebar-item svg {
+        width: 18px;
+        height: 18px;
+    }
+}
