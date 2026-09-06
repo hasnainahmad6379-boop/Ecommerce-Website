@@ -103,7 +103,6 @@ app.post("/addproduct", async (req, res) => {
   });
   console.log(product);
   await product.save();
-  console.log("saved");
   res.json({
     success: true,
     name: req.body.name,
@@ -125,7 +124,6 @@ app.post("/removeproduct", async (req, res) => {
 // Api for to get All Products
 app.get("/allproducts", async (req, res) => {
   let products = await Product.find({});
-  console.log("All Products ");
   res.send(products);
 });
 
@@ -258,7 +256,6 @@ app.post("/addtocart", fetchUser, async (req, res) => {
 });
 //creating end point to remove item for cartData
 app.post("/removefromcart", fetchUser, async (req, res) => {
-  console.log("Removed", req.body.itemId);
   let userData = await Users.findOne({
     _id: req.user.id,
   });
@@ -277,7 +274,6 @@ app.post("/removefromcart", fetchUser, async (req, res) => {
 
 //craeting end point to get cart data
 app.post("/getcart", fetchUser, async (req, res) => {
-  console.log("GEt cart");
   let usersData = await Users.findOne({
     _id: req.user.id,
   });
