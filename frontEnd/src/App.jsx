@@ -12,7 +12,8 @@ import Footer from "./components/footer/Footer";
 import men_banner from "./components/Assets/banner_mens.png";
 import women_banner from "./components/Assets/banner_women.png";
 import kids_banner from "./components/Assets/banner_kids.png";
-
+import PaymentSuccess from "./pages/PaymentSuccess";
+import Checkout from "./pages/Checkout";
 const App = () => {
   return (
     <div>
@@ -37,7 +38,10 @@ const App = () => {
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>
